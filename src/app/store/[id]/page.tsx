@@ -35,6 +35,6 @@ async function Product({params}: IProductProps) {
             </div>
         </Container>
     );
-};
+}
 
 export default Product
