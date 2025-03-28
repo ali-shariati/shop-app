@@ -1,5 +1,6 @@
 import Container from "@/components/Container";
 import {IProductItemProps} from "@/components/ProductItem";
+import AddToCart from "@/components/AddToCart";
 
 interface IProductProps {
     params: Promise<{ id: string }>,
@@ -21,11 +22,7 @@ async function Product({params}: IProductProps) {
                         {data.description}
                     </p>
                     <p className='font-bold'> قیمت : <span> {data.price}</span> تومان</p>
-                    <div className='mt-4'>
-                        <button className='px-4 py-2 rounded bg-gray-300'>+</button>
-                        <span> 3 </span>
-                        <button className='px-4 py-2 rounded bg-gray-300'>-</button>
-                    </div>
+                    <AddToCart id={id}/>
 
                 </div>
                 <div className='col-span-3'>
