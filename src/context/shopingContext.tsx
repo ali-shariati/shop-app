@@ -13,7 +13,9 @@ type CartItems={
 type TShoppingCartContext ={
     cartItems: CartItems[],
     handelIncreaseProductQty: (id: number) => void,
-    getProductQty: (id: number) => number
+    handelDecreaseProductQty: (id: number) => void,
+    getProductQty: (id: number) => number,
+    getTotalQty: number
 }
 
 const ShoppingContext = createContext({} as TShoppingCartContext)
@@ -27,18 +29,22 @@ function ShoppingContextProvider({children}: ShoppingContextProviderProps) {
 
     const [cartItems , setCartItems] = useState<CartItems[]>([])
 
+    const getTotalQty = cartItems.reduce((totalQty, item)=>{
+        return  totalQty + item.qty
+    }, 0)
+
     const getProductQty = (id: number) => {
         return cartItems.find(item => item.id == id)?.qty || 0
     }
 
     const handelIncreaseProductQty = (id: number) => {
-        setCartItems(currentItem =>{
-            let isNotProductExist = currentItem.find(item => item.id == id) == null
+        setCartItems(currentItems =>{
+            let isNotProductExist = currentItems.find(item => item.id == id) == null
             if(isNotProductExist){
-                return [...currentItem , {id , qty: 1}]
+                return [...currentItems , {id , qty: 1}]
             }
             else {
-                return currentItem.map(item => {
+                return currentItems.map(item => {
                     if (item.id == id) {
                         return {...item , qty: item.qty + 1}
                     } else {
@@ -49,8 +55,26 @@ function ShoppingContextProvider({children}: ShoppingContextProviderProps) {
         })
     }
 
+    const handelDecreaseProductQty = (id: number) =>{
+        setCartItems(currentItems =>{
+            let isLastOne = currentItems.find(item => item.id == id)?.qty == 1
+            if(isLastOne){
+                return currentItems.filter(item => item.id != id)
+            }
+            else {
+                return currentItems.map(item => {
+                    if (item.id == id) {
+                        return {...item , qty: item.qty - 1}
+                    } else {
+                        return item
+                    }
+                })
+            }
+        })
+    }
+
     return (
-        <ShoppingContext.Provider value={{cartItems, handelIncreaseProductQty, getProductQty}}>
+        <ShoppingContext.Provider value={{cartItems, handelIncreaseProductQty,handelDecreaseProductQty, getProductQty, getTotalQty}}>
             {children}
         </ShoppingContext.Provider>
     );
