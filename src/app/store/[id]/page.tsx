@@ -21,7 +21,7 @@ async function Product({params}: IProductProps) {
                     <p className='text-gray-600'>
                         {data.description}
                     </p>
-                    <p className='font-bold'> قیمت : <span> {data.price}</span> تومان</p>
+                    <p className='font-bold'> قیمت : <span> {data.price.toString().replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[+d])}</span> تومان</p>
                     <AddToCart id={id}/>
 
                 </div>
