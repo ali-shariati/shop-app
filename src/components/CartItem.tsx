@@ -15,7 +15,7 @@ function CartItem(){
                     <p className='m-1'><span> قیمت محصول : </span><span> ۱۰۰۰ </span><span>تومان</span></p>
                     <div className='mt-4'>
                         <button className='px-4 py-2 rounded bg-gray-200'>+</button>
-                        <span className='m-2'> 3 </span>
+                        <span className='m-2'> ۳</span>
                         <button className='px-4 py-2 rounded bg-gray-200'>-</button>
                     </div>
                 </div>
