@@ -20,7 +20,7 @@ async function ProductItem({image, title , price}: IProductItemProps) {
             <div className='p-4  text-right'>
                 <h3 className='font-bold'>{title}</h3>
                 <p>
-                    قیمت : <span>{price}</span> تومان
+                    قیمت : <span>{price.toString().replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[+d])}</span> تومان
                 </p>
             </div>
         </div>
