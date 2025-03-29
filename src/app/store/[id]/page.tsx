@@ -16,15 +16,6 @@ async function Product({params}: IProductProps) {
     return (
         <Container>
             <div className='grid grid-cols-12  mt-8 shadow-md'>
-                <div className='col-span-9 rtl text-right p-4'>
-                    <h2 className='font-bold text-xl'>{data.title}</h2>
-                    <p className='text-gray-600'>
-                        {data.description}
-                    </p>
-                    <p className='font-bold'> قیمت : <span> {data.price.toString().replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[+d])}</span> تومان</p>
-                    <AddToCart id={id}/>
-
-                </div>
                 <div className='col-span-3'>
                     <img
                         src={data.image}
@@ -32,6 +23,17 @@ async function Product({params}: IProductProps) {
                         className='w-full h-64'
                     />
                 </div>
+                <div className='col-span-9 rtl text-right p-4'>
+                    <h2 className='font-bold text-xl'>{data.title}</h2>
+                    <p className='text-gray-600'>
+                        {data.description}
+                    </p>
+                    <p className='font-bold'> قیمت
+                        : <span> {data.price.toString().replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[+d])}</span> تومان</p>
+                    <AddToCart id={id}/>
+
+                </div>
+
             </div>
         </Container>
     );
