@@ -20,7 +20,6 @@ function CartItem({id, qty}: ICartItemProps) {
         axios.get(`http://localhost:7000/product/${id}`).then(res => {
             const {data} = res
             setProductData(data)
-            console.log(res.data)
         })
     }, []);
     return (
