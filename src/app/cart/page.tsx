@@ -2,10 +2,20 @@
 import CartItem from "@/components/CartItem";
 import Container from "@/components/Container";
 import {useShoppingCartContext} from "@/context/shopingContext";
+import {useEffect, useState} from "react";
+import axios from "axios";
+import {IProductItemProps} from "@/components/ProductItem";
+import formatPrice from "@/utils/number";
 
 function Cart (){
     const {cartItems} = useShoppingCartContext()
-
+    const [productData , setProductData] = useState<IProductItemProps[]>([])
+    useEffect(() => {
+        axios.get(`http://localhost:7000/product`).then(res => {
+            const {data} = res
+            setProductData(data)
+        })
+    }, []);
     return (
         <Container>
             <h1 className='my-4 p-4'>سبد خرید</h1>
@@ -18,14 +28,26 @@ function Cart (){
                     ))}
                 </div>
                 <div className=' col-span-3 border border-gray-200 shadow-lg shadow-gray-100 p-4 rounded-md'>
-                    <p className='m-2'><span> قیمت کل : </span><span> ۱۰۰۰ </span><span>تومان</span></p>
+                    <p className='m-2'>
+                        <span> قیمت کل : </span>
+                        <span>
+                          {formatPrice(cartItems.reduce((total, item) => {
+                              const selectedProduct = productData.find(
+                                  (product) => product.id === item.id.toString()
+                              );
+                              return total + item.qty * (selectedProduct?.price || 0);
+                          }, 0))}
+                        </span>
+                        <span className='ml-2'> تومان </span>
+
+                    </p>
                     <p className='m-2'><span> سود شما از این خرید : </span><span> ۱۰۰۰ </span><span>تومان</span></p>
                     <p className='m-2'><span> قیمت نهایی : </span><span> ۱۰۰۰ </span><span>تومان</span></p>
                     <div>
                         <input
                             type='text'
                             placeholder='کد تخفیف را وارد کنید'
-                               className='border border-gray-200 w-full h-12 rounded-md p-2'
+                            className='border border-gray-200 w-full h-12 rounded-md p-2'
                         />
                         <button className='px-4 py-2 rounded bg-gray-300 mt-4'>اعمال تخفیف</button>
                     </div>
