@@ -5,28 +5,28 @@
       "image":"https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
       "title":"محصول یک",
       "description": "لورم ایپسوم عتشسبهشبنشسب",
-      "price": 23
+      "price": 2300000
     },
     {
       "id": "2",
       "image":"https://www.nickfordphotography.co.uk/wp-content/uploads/2022/06/NFP_FS15-1024x683.jpg.webp",
       "title":"محصول دو",
       "description": "لورم ایپسوم عتشسبهشبنشسب",
-      "price": 40
+      "price": 4000000
     },
     {
       "id": "3",
       "image":"https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
       "title":"محصول سه",
       "description": "لورم ایپسوم عتشسبهشبنشسب",
-      "price": 35
+      "price": 3520000
     },
     {
       "id": "4",
       "image":"https://d2s30hray1l0uq.cloudfront.net/frontend/product-styling-Creating-a-Composition-1.jpg",
       "title":"محصول چهار",
       "description": "لورم ایپسوم عتشسبهشبنشسب",
-      "price": 88
+      "price": 8800000
     }
   ]
 }
