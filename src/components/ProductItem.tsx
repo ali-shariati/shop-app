@@ -1,3 +1,5 @@
+import formatPrice from "@/utils/number";
+
 export interface IProductItemProps {
     id: string,
     image: string,
@@ -20,7 +22,9 @@ async function ProductItem({image, title , price}: IProductItemProps) {
             <div className='p-4  text-right'>
                 <h3 className='font-bold'>{title}</h3>
                 <p>
-                    قیمت : <span>{price.toString().replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[+d])}</span> تومان
+                     <span>قیمت :</span>
+                    <span>{formatPrice(price)}</span>
+                    <span>  تومان</span>
                 </p>
             </div>
         </div>
