@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import {IProductItemProps} from "@/components/ProductItem";
 import AddToCart from "@/components/AddToCart";
+import formatPrice from "@/utils/number";
 
 interface IProductProps {
     params: Promise<{ id: string }>,
@@ -28,8 +29,11 @@ async function Product({params}: IProductProps) {
                     <p className='text-gray-600'>
                         {data.description}
                     </p>
-                    <p className='font-bold'> قیمت
-                        : <span> {data.price.toString().replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[+d])}</span> تومان</p>
+                    <p className='font-bold'>
+                        <span>قیمت :</span>
+                        <span> {formatPrice(data.price)}</span>
+                        <span>تومان</span>
+                    </p>
                     <AddToCart id={id}/>
 
                 </div>
