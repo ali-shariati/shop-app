@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import AddToCart from "@/components/AddToCart";
+import formatPrice from "@/utils/number";
 
 interface ICartItemProps{
     id : number,
@@ -35,7 +36,7 @@ function CartItem({id, qty}: ICartItemProps) {
                 <div className='col-span-10 text-right mt-2'>
                     <h3 className='m-1'>نام محصول : {productData?.title}</h3>
                     <p className='m-1'><span>تعداد : </span><span>{qty.toString().replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[+d])}</span></p>
-                    <p className='m-1'><span> قیمت محصول : </span><span> {productData?.price.toString().replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[+d])} </span><span>تومان</span></p>
+                    <p className='m-1'><span> قیمت محصول : </span><span> {formatPrice(productData?.price)} </span><span>تومان</span></p>
                     <AddToCart id={id.toString()}/>
                 </div>
             </div>
