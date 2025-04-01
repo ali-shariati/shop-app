@@ -5,7 +5,7 @@ import Link from "next/link";
 
 async function Store() {
 
-    const result = await fetch("http://localhost:7000/product")
+    const result = await fetch("http://localhost:7000/products")
     const data = (await result.json()) as IProductItemProps[]
 
     return (
