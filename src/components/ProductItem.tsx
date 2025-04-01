@@ -1,12 +1,7 @@
 import formatPrice from "@/utils/number";
+import {IProductItemProps} from "@/types/products";
 
-export interface IProductItemProps {
-    id: string,
-    image: string,
-    title: string,
-    description: string,
-    price: number,
-}
+
 async function ProductItem({image, title , price}: IProductItemProps) {
 
 
