@@ -1,11 +1,12 @@
 import Container from "@/components/Container";
 // import Image from "next/image";
-import ProductItem, {IProductItemProps} from "@/components/ProductItem";
+import ProductItem from "@/components/ProductItem";
 import Link from "next/link";
+import {IProductItemProps} from "@/types/products";
 
 async function Store() {
 
-    const result = await fetch("http://localhost:7000/products")
+    const result = await fetch("http://localhost:7000/products?_page=1&_per_page=5")
     const data = (await result.json()) as IProductItemProps[]
 
     return (
