@@ -4,8 +4,8 @@ import Container from "@/components/Container";
 import {useShoppingCartContext} from "@/context/shopingContext";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {IProductItemProps} from "@/components/ProductItem";
 import formatPrice from "@/utils/number";
+import {IProductItemProps} from "@/types/products";
 
 interface IDiscountData {
     id: number,
