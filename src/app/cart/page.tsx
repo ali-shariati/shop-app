@@ -7,15 +7,44 @@ import axios from "axios";
 import {IProductItemProps} from "@/components/ProductItem";
 import formatPrice from "@/utils/number";
 
+interface IDiscountData {
+    id: number,
+    code: string,
+    percent: number
+}
 function Cart (){
+
     const {cartItems} = useShoppingCartContext()
     const [productData , setProductData] = useState<IProductItemProps[]>([])
+    const [discountCode, setDiscountCode] = useState('');
+    const [finalPrice, setFinalPrice] = useState(0)
+    const [discountPrice, setDiscountPrice] = useState(0)
+
     useEffect(() => {
-        axios.get(`http://localhost:7000/product`).then(res => {
+        axios.get(`http://localhost:7000/products`).then(res => {
             const {data} = res
             setProductData(data)
         })
     }, []);
+
+    let totalPrice = cartItems.reduce((total, item) => {
+        const selectedProduct = productData.find(
+            (product) => product.id === item.id.toString()
+        );
+        return total + item.qty * (selectedProduct?.price || 0);
+    }, 0)
+
+    const handelSubmitDiscount = ()=>{
+        axios.get(`http://localhost:7000/discounts?code=${discountCode}`).then(res => {
+            console.log(res)
+            const data = res.data as IDiscountData[]
+            let discountPrice = totalPrice * data[0].percent / 100
+            let finalPrice = totalPrice - discountPrice
+
+            setDiscountPrice(discountPrice)
+            setFinalPrice(finalPrice)
+        })
+    }
     return (
         <Container>
             <h1 className='my-4 p-4'>سبد خرید</h1>
@@ -31,25 +60,22 @@ function Cart (){
                     <p className='m-2'>
                         <span> قیمت کل : </span>
                         <span>
-                          {formatPrice(cartItems.reduce((total, item) => {
-                              const selectedProduct = productData.find(
-                                  (product) => product.id === item.id.toString()
-                              );
-                              return total + item.qty * (selectedProduct?.price || 0);
-                          }, 0))}
+                          {formatPrice(totalPrice)}
                         </span>
                         <span className='ml-2'> تومان </span>
 
                     </p>
-                    <p className='m-2'><span> سود شما از این خرید : </span><span> ۱۰۰۰ </span><span>تومان</span></p>
-                    <p className='m-2'><span> قیمت نهایی : </span><span> ۱۰۰۰ </span><span>تومان</span></p>
+                    <p className='m-2'><span> سود شما از این خرید : </span><span> {formatPrice(discountPrice)} </span><span>تومان</span></p>
+                    <p className='m-2'><span> قیمت نهایی : </span><span>  {formatPrice(finalPrice)}</span><span>تومان</span></p>
+
                     <div>
                         <input
                             type='text'
                             placeholder='کد تخفیف را وارد کنید'
                             className='border border-gray-200 w-full h-12 rounded-md p-2'
+                            onChange={(e)=>setDiscountCode(e.target.value)}
                         />
-                        <button className='px-4 py-2 rounded bg-gray-300 mt-4'>اعمال تخفیف</button>
+                        <button className='px-4 py-2 rounded bg-gray-300 mt-4' onClick={handelSubmitDiscount}>اعمال تخفیف</button>
                     </div>
 
                 </div>
