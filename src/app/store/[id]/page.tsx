@@ -4,7 +4,7 @@ import AddToCart from "@/components/AddToCart";
 
 export default async function ProductPage({ params }) {
     const { id } = params;
-    const res = await fetch(`http://localhost:7000/product/${id}`);
+    const res = await fetch(`http://localhost:7000/products/${id}`);
     const product = await res.json();
 
     return (
