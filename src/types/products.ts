@@ -11,7 +11,7 @@ export interface IProductList {
     prev: number |null,
     next: number | null,
     last: number | null,
-    pages: number | null,
+    pages: number ,
     items: number | null,
     data : IProductItemProps[]
 }
