@@ -18,7 +18,7 @@ interface ProductData{
 function CartItem({id, qty}: ICartItemProps) {
     const [productData , setProductData] = useState<ProductData | null>(null)
     useEffect(() => {
-        axios.get(`http://localhost:7000/product/${id}`).then(res => {
+        axios.get(`http://localhost:7000/products/${id}`).then(res => {
             const {data} = res
             setProductData(data)
         })
