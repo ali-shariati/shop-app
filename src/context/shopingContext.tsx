@@ -1,5 +1,5 @@
 "use client"
-import React, {createContext, useContext, useState} from "react";
+import React, {createContext, useContext, useEffect, useState} from "react";
 
 type ShoppingContextProviderProps ={
     children : React.ReactNode
@@ -79,6 +79,17 @@ function ShoppingContextProvider({children}: ShoppingContextProviderProps) {
             return currentItems.filter(item => item.id != id)
         })
     }
+
+    useEffect(() => {
+        const cartItems = localStorage.getItem("cartItems")
+        if (cartItems) {
+            setCartItems(JSON.parse(cartItems))
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("cartItems" , JSON.stringify(cartItems))
+    }, [cartItems]);
 
     return (
         <ShoppingContext.Provider value={
