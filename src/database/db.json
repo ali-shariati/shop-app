@@ -2,31 +2,218 @@
   "product": [
     {
       "id": "1",
-      "image":"https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
-      "title":"محصول یک",
-      "description": "لورم ایپسوم عتشسبهشبنشسب",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول یک",
+      "description": "این محصول با کیفیت بالا و طراحی مدرن، انتخاب مناسبی برای استفاده روزمره است. از مواد اولیه طبیعی ساخته شده و دوام بالایی دارد.",
       "price": 2300000
     },
     {
       "id": "2",
-      "image":"https://www.nickfordphotography.co.uk/wp-content/uploads/2022/06/NFP_FS15-1024x683.jpg.webp",
-      "title":"محصول دو",
-      "description": "لورم ایپسوم عتشسبهشبنشسب",
+      "image": "https://www.nickfordphotography.co.uk/wp-content/uploads/2022/06/NFP_FS15-1024x683.jpg.webp",
+      "title": "محصول دو",
+      "description": "این محصول با بهره‌گیری از جدیدترین فناوری‌ها تولید شده و دارای کارایی بالا است. انتخابی عالی برای کسانی که به کیفیت اهمیت می‌دهند.",
       "price": 4000000
     },
     {
       "id": "3",
-      "image":"https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
-      "title":"محصول سه",
-      "description": "لورم ایپسوم عتشسبهشبنشسب",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول سه",
+      "description": "ترکیبی از زیبایی و عملکرد، این محصول با طراحی زیبا و منحصر به فرد خود، رضایت مشتریان را جلب کرده است.",
       "price": 3520000
     },
     {
       "id": "4",
-      "image":"https://d2s30hray1l0uq.cloudfront.net/frontend/product-styling-Creating-a-Composition-1.jpg",
-      "title":"محصول چهار",
-      "description": "لورم ایپسوم عتشسبهشبنشسب",
+      "image": "https://d2s30hray1l0uq.cloudfront.net/frontend/product-styling-Creating-a-Composition-1.jpg",
+      "title": "محصول چهار",
+      "description": "با استفاده از تکنولوژی پیشرفته و مواد اولیه مرغوب، این محصول ارزش خرید بالایی دارد و تجربه‌ای بی‌نظیر ارائه می‌دهد.",
       "price": 8800000
+    },
+    {
+      "id": "5",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول پنج",
+      "description": "یک انتخاب برتر در میان محصولات مشابه، با کیفیت ساخت بالا و دوام طولانی. مناسب برای تمامی نیازهای روزانه شما.",
+      "price": 2750000
+    },
+    {
+      "id": "6",
+      "image": "https://www.nickfordphotography.co.uk/wp-content/uploads/2022/06/NFP_FS15-1024x683.jpg.webp",
+      "title": "محصول شش",
+      "description": "این محصول با طراحی نوآورانه و عملکرد عالی، ترکیبی از زیبایی و کارایی را به ارمغان می‌آورد.",
+      "price": 4800000
+    },
+    {
+      "id": "7",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول هفت",
+      "description": "انتخابی مناسب برای کسانی که به دنبال کیفیت و دوام هستند. طراحی زیبا و عملکرد مطلوب از ویژگی‌های برتر این محصول است.",
+      "price": 3200000
+    },
+    {
+      "id": "8",
+      "image": "https://d2s30hray1l0uq.cloudfront.net/frontend/product-styling-Creating-a-Composition-1.jpg",
+      "title": "محصول هشت",
+      "description": "با تمرکز بر جزئیات و استفاده از مواد با کیفیت، این محصول تجربه‌ای لذت‌بخش از کارایی و زیبایی را فراهم می‌کند.",
+      "price": 5500000
+    },
+    {
+      "id": "9",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول نه",
+      "description": "محصولی با طراحی منحصر به فرد و کیفیت ساخت بالا که به شما امکان می‌دهد از آن در هر شرایطی بهره ببرید.",
+      "price": 4100000
+    },
+    {
+      "id": "10",
+      "image": "https://www.nickfordphotography.co.uk/wp-content/uploads/2022/06/NFP_FS15-1024x683.jpg.webp",
+      "title": "محصول ده",
+      "description": "این محصول با تمرکز بر راحتی و عملکرد، انتخابی عالی برای استفاده در محیط‌های مختلف می‌باشد.",
+      "price": 6300000
+    },
+    {
+      "id": "11",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول یازده",
+      "description": "یک محصول با کیفیت و طراحی مدرن که عملکردی بی‌نظیر و دوام بالایی را ارائه می‌دهد.",
+      "price": 2900000
+    },
+    {
+      "id": "12",
+      "image": "https://d2s30hray1l0uq.cloudfront.net/frontend/product-styling-Creating-a-Composition-1.jpg",
+      "title": "محصول دوازده",
+      "description": "با طراحی زیبا و استفاده از تکنولوژی روز دنیا، این محصول تجربه‌ای متفاوت از کیفیت را به شما ارائه می‌دهد.",
+      "price": 4700000
+    },
+    {
+      "id": "13",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول سیزده",
+      "description": "ترکیبی از زیبایی و کارایی، این محصول با دقت در جزئیات ساخته شده و رضایت شما را جلب می‌کند.",
+      "price": 3600000
+    },
+    {
+      "id": "14",
+      "image": "https://www.nickfordphotography.co.uk/wp-content/uploads/2022/06/NFP_FS15-1024x683.jpg.webp",
+      "title": "محصول چهارده",
+      "description": "با کیفیت ساخت فوق‌العاده و طراحی مدرن، این محصول یکی از بهترین انتخاب‌ها در بازار است.",
+      "price": 7500000
+    },
+    {
+      "id": "15",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول پانزده",
+      "description": "یک انتخاب مطمئن با دوام بالا و کارایی عالی. این محصول نیازهای روزانه شما را به بهترین شکل برطرف می‌کند.",
+      "price": 3100000
+    },
+    {
+      "id": "16",
+      "image": "https://d2s30hray1l0uq.cloudfront.net/frontend/product-styling-Creating-a-Composition-1.jpg",
+      "title": "محصول شانزده",
+      "description": "این محصول با بهره‌گیری از جدیدترین فناوری‌ها و طراحی زیبا، تجربه‌ای متفاوت ارائه می‌دهد.",
+      "price": 5200000
+    },
+    {
+      "id": "17",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول هفده",
+      "description": "با کیفیت ساخت بالا و استفاده از مواد اولیه برتر، این محصول انتخاب مناسبی برای هر سبک زندگی است.",
+      "price": 4300000
+    },
+    {
+      "id": "18",
+      "image": "https://www.nickfordphotography.co.uk/wp-content/uploads/2022/06/NFP_FS15-1024x683.jpg.webp",
+      "title": "محصول هجده",
+      "description": "تلفیقی از طراحی مدرن و کارایی بالا که این محصول را به گزینه‌ای ایده‌آل برای استفاده روزانه تبدیل کرده است.",
+      "price": 6800000
+    },
+    {
+      "id": "19",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول نوزده",
+      "description": "محصولی با دوام و کیفیت ساخت عالی، مناسب برای استفاده در محیط‌های مختلف و دارای طراحی جذاب.",
+      "price": 3700000
+    },
+    {
+      "id": "20",
+      "image": "https://d2s30hray1l0uq.cloudfront.net/frontend/product-styling-Creating-a-Composition-1.jpg",
+      "title": "محصول بیست",
+      "description": "با تمرکز بر راحتی و عملکرد، این محصول با کیفیت بالا و طراحی منحصر به فرد، انتخابی هوشمندانه برای خریداران است.",
+      "price": 5900000
+    },
+    {
+      "id": "21",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول بیست و یک",
+      "description": "این محصول با کیفیت بی‌نظیر و دوام فوق‌العاده، انتخاب مطمئن برای مصرف روزانه محسوب می‌شود.",
+      "price": 3400000
+    },
+    {
+      "id": "22",
+      "image": "https://www.nickfordphotography.co.uk/wp-content/uploads/2022/06/NFP_FS15-1024x683.jpg.webp",
+      "title": "محصول بیست و دو",
+      "description": "با استفاده از تکنولوژی مدرن و مواد اولیه مرغوب، این محصول کارایی بالا و ظاهری جذاب دارد.",
+      "price": 7200000
+    },
+    {
+      "id": "23",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول بیست و سه",
+      "description": "یک محصول با طراحی شیک و کیفیت ساخت بالا که تمامی نیازهای شما را در یک بسته فراهم می‌کند.",
+      "price": 3900000
+    },
+    {
+      "id": "24",
+      "image": "https://d2s30hray1l0uq.cloudfront.net/frontend/product-styling-Creating-a-Composition-1.jpg",
+      "title": "محصول بیست و چهار",
+      "description": "با طراحی نوآورانه و بهره‌گیری از جدیدترین فناوری‌ها، این محصول تجربه‌ای متفاوت از کارایی را ارائه می‌دهد.",
+      "price": 8100000
+    },
+    {
+      "id": "25",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول بیست و پنج",
+      "description": "این محصول با دوام بالا و کیفیت ساخت عالی، گزینه‌ای مناسب برای استفاده در هر شرایطی است.",
+      "price": 3500000
+    },
+    {
+      "id": "26",
+      "image": "https://www.nickfordphotography.co.uk/wp-content/uploads/2022/06/NFP_FS15-1024x683.jpg.webp",
+      "title": "محصول بیست و شش",
+      "description": "ترکیبی از طراحی زیبا و عملکرد برتر، این محصول رضایت کامل مشتریان را جلب می‌کند.",
+      "price": 5600000
+    },
+    {
+      "id": "27",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول بیست و هفت",
+      "description": "با کیفیت ساخت فوق‌العاده و طراحی منحصر به فرد، این محصول تجربه‌ای بی‌نظیر از کیفیت را به ارمغان می‌آورد.",
+      "price": 4200000
+    },
+    {
+      "id": "28",
+      "image": "https://d2s30hray1l0uq.cloudfront.net/frontend/product-styling-Creating-a-Composition-1.jpg",
+      "title": "محصول بیست و هشت",
+      "description": "یک محصول با کارایی بالا و دوام چشمگیر که از مواد اولیه برتر ساخته شده و طراحی مدرن دارد.",
+      "price": 6700000
+    },
+    {
+      "id": "29",
+      "image": "https://img.freepik.com/free-photo/organic-cosmetic-product-with-dreamy-aesthetic-fresh-background_23-2151382816.jpg",
+      "title": "محصول بیست و نه",
+      "description": "این محصول با توجه به جزئیات و استفاده از تکنولوژی روز دنیا، ترکیبی از زیبایی و کارایی را ارائه می‌دهد.",
+      "price": 3800000
+    },
+    {
+      "id": "30",
+      "image": "https://www.nickfordphotography.co.uk/wp-content/uploads/2022/06/NFP_FS15-1024x683.jpg.webp",
+      "title": "محصول سی",
+      "description": "با کیفیت ساخت بالا و طراحی مدرن، این محصول انتخاب مناسبی برای کسانی است که به جزئیات اهمیت می‌دهند.",
+      "price": 6000000
     }
+  ],
+  "discount": [
+    {  "id": "1", "code": "OFF10", "percent": 10 },
+    {  "id": "2", "code": "OFF20", "percent": 20 },
+    {  "id": "3", "code": "SAVE30", "percent": 30 }
   ]
 }
