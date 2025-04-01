@@ -19,12 +19,12 @@ async function ProductItem({image, title , price}: IProductItemProps) {
             className='w-full h-64'
                 alt='product'
             />
-            <div className='p-4  text-right'>
-                <h3 className='font-bold'>{title}</h3>
+            <div className='p-4 text-right  '>
+                <h3 className='font-bold mb-2'>{title}</h3>
                 <p>
-                     <span>قیمت :</span>
+                    <span className='ml-2'>قیمت :</span>
                     <span>{formatPrice(price)}</span>
-                    <span>  تومان</span>
+                    <span className='mr-2'>  تومان</span>
                 </p>
             </div>
         </div>
