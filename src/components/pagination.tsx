@@ -1,13 +1,17 @@
 "use client"
 import ReactPaginate from "react-paginate";
-import {useRouter} from "next/navigation";
+import {useRouter, useSearchParams} from "next/navigation";
 
 function Pagination({pageCount}:{pageCount: number} ){
-
+    const  searchParams = useSearchParams();
     const router = useRouter()
     const handlePageClick = (e: { selected: number }) => {
         const page= e.selected + 1
-        router.push(`/store?page=${page}&per_page=8`)
+        const currentSearchParams = new URLSearchParams(searchParams.toString());
+        currentSearchParams.set("page", page.toString())
+        currentSearchParams.set("per_page", "8")
+
+        router.push(`/store?${currentSearchParams.toString()}`)
     }
     return(
         <div>
