@@ -4,6 +4,8 @@ export interface IProductItemProps {
     title: string,
     description: string,
     price: number,
+    category: string,
+    brand: string
 }
 
 export interface IProductList {
